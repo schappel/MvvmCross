@@ -10,7 +10,8 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>System.Xml.Serialization</RootNamespace>
-    <AssemblyName>System.Xml.Serialization.Droid</AssemblyName>
+    <AssemblyName Condition="'$(OS)' != 'Windows_NT'">System.Xml.Serialization.Droid</AssemblyName>
+    <AssemblyName Condition="'$(OS)' == 'Windows_NT'">System.Xml.Serialization</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidSupportedAbis>armeabi</AndroidSupportedAbis>

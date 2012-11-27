@@ -10,7 +10,8 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>System.Net</RootNamespace>
-    <AssemblyName>System.Net.droid</AssemblyName>
+    <AssemblyName Condition="'$(OS)' != 'Windows_NT'">System.Net.Droid</AssemblyName>
+    <AssemblyName Condition="'$(OS)' == 'Windows_NT'">System.Net</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
